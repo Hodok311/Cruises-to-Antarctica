@@ -1,0 +1,124 @@
+.card-cruise {
+  position: relative;
+  color: $color-alice-blue;
+
+  &:hover .card-cruise__image {
+    opacity: 0;
+  }
+
+  picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 22px;
+    left: 30px;
+    margin: 0;
+    z-index: 10;
+
+    @include vp-1023 {
+      left: 34px;
+      bottom: 27px;
+    }
+
+    @include vp-767 {
+      left: 25px;
+      bottom: 17px;
+    }
+  }
+}
+
+.card-cruise h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    margin-bottom: 13px;
+  }
+}
+
+.card-cruise__list {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 14px;
+  overflow-y: scroll;
+
+  dt {
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+
+  dd {
+    margin: 0;
+    margin-bottom: 11px;
+  }
+}
+
+.card-cruise__cover {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-tangaroa;
+  padding: 30px 25px 75px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  @include vp-1023 {
+    padding: 28px 35px 76px;
+  }
+
+  @include vp-767 {
+    padding: 29px 25px 77px;
+  }
+}
+
+.card-cruise a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  background-color: $color-alice-blue;
+  cursor: pointer;
+  transition: opacity $trans-default;
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  width: 81%;
+
+  &:hover {
+    background-color: $color-polo-blue;
+  }
+
+  &:focus {
+    background-color: $color-polo-blue;
+
+    + .card-cruise__image {
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 77%;
+    left: 35px;
+  }
+}
