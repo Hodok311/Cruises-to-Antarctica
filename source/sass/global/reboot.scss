@@ -19,7 +19,6 @@ html {
   font-family: $ff-montserrat;
   color: $color-tangaroa;
   scroll-behavior: smooth;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
@@ -36,9 +35,8 @@ body {
 }
 
 a {
-  color: $color-tangaroa;
+  color: $color-default-black;
   text-decoration: none;
-  user-select: none;
 }
 
 img,

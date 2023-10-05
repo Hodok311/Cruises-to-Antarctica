@@ -58,24 +58,19 @@ export class Form {
     return this._validator.validateFormElement(item);
   }
 
-
   _onFormSubmit(event, callback = null) {
-    const result = this.validateForm(event.target);
-    if (result === true && callback) {
-      this._callbacks[callback].successCallback(event);
-      if (this._callbacks[callback].reset) {
+    if (this.validateForm(event.target) && callback) {
+      this._callbacks.base.successCallback(event);
+      if (this._callbacks.base.reset) {
         setTimeout(() => {
           this.reset(event.target);
-        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+        }, this._callbacks.base.resetTimeout ? this._callbacks.base.resetTimeout : 500);
       }
       return;
     }
-    if (result === false && callback) {
-      this._callbacks[callback].errorCallback(event);
+    if (!this.validateForm(event.target) && callback) {
+      this._callbacks.base.errorCallback(event);
       return;
-    }
-    if (result === true) {
-      event.target.submit();
     }
   }
 
@@ -96,7 +91,6 @@ export class Form {
     form.noValidate = true;
 
     form.addEventListener('submit', (event) => {
-      event.preventDefault();
       this._onFormSubmit(event, callback);
     });
 

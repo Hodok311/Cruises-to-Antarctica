@@ -6,6 +6,7 @@
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden;
 
   .header,
   .footer {
@@ -20,8 +21,8 @@
 .rouble {
   font-family: $ff-rouble;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -63,15 +64,9 @@
 
 .no-transition {
   /* stylelint-disable-next-line */
-  transition: none !important;
+  transition: none;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-.reset-list {
-  margin: 0;
-  list-style: none;
-  padding: 0;
 }
