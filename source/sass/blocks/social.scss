@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  align-self: center;
+  align-self: start;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 6px 18px;
   margin-top: 3px;
   min-width: 112px;
+
 
   @include vp-1023 {
     min-width: 91px;

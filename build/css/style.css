@@ -725,8 +725,22 @@ button,
 
 .navigation__logo svg {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 38px;
+}
+@media (max-width: 1023px) {
+  .navigation__logo svg {
+    display: block;
+    width: 38px;
+    height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .navigation__logo svg {
+    display: block;
+    width: 42px;
+    height: 22px;
+  }
 }
 
 .navigation__logo {
@@ -1525,6 +1539,8 @@ button,
 @media (max-width: 767px) {
   .booking__form {
     padding: 34px 30px 40px 30px;
+    width: 290px;
+    height: 460px;
   }
 }
 
@@ -1945,8 +1961,8 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
-  -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: start;
+      align-self: start;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
